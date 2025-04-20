@@ -151,8 +151,8 @@ INSERT INTO movies (
     releaseyear,
     rating,
     studio_ID) 
-VALUES ("Batman Begins", 2005, "PG-13", 1)
-VALUES ("The Dark Knight", 2008, "PG-13", 1)
+VALUES ("Batman Begins", 2005, "PG-13", 1),
+VALUES ("The Dark Knight", 2008, "PG-13", 1),
 VALUES ("The Dark Knight Rises", 2012, "PG-13", 1);
 
 INSERT INTO studios (
@@ -160,13 +160,39 @@ INSERT INTO studios (
 VALUES ("Warner Bros");
 
 INSERT INTO topcast (
-    title,
-    releaseyear,
-    rating,
-    studio_ID) 
-VALUES ("Batman Begins", 2005, "PG-13", 1)
-VALUES ("The Dark Knight", 2008, "PG-13", 1)
-VALUES ("The Dark Knight Rises", 2012, "PG-13", 1);
+    movie_ID,
+    actor_ID,
+    charactername) 
+VALUES (1, 1, "Bruce Wayne"),
+VALUES (1, 2, "Alfred"),
+VALUES (1, 3, "Ra's Al Ghul"),
+VALUES (1, 4, "Rachel Dawes"),
+VALUES (1, 5, "Commissioner Gordon"),
+VALUES (2, 1, "Bruce Wayne"),
+VALUES (2, 6, "Joker"),
+VALUES (2, 7, "Harvey Dent"),
+VALUES (2, 2, "Alfred"),
+VALUES (2, 8, "Rachel Dawes"),
+VALUES (3, 1, "Bruce Wayne"),
+VALUES (3, 5, "Commissioner Gordon"),
+VALUES (3, 9, "Bane"),
+VALUES (3, 10, "John Blake"),
+VALUES (3, 11, "Selina Kyle");
+
+INSERT INTO actors (
+    actorname
+)
+VALUES ("Christian Bale"),
+VALUES ("Michael Caine"),
+VALUES ("Liam Neeson"),
+VALUES ("Katie Holmes"),
+VALUES ("Gary Oldman"),
+VALUES ("Heath Ledger"),
+VALUES ("Aaron Eckhart"),
+VALUES ("Maggie Gyllenhaal"),
+VALUES ("Tom Hardy"),
+VALUES ("Joseph Gordon-Levitt"),
+VALUES ("Anne Hathaway");
 
 -- Prints a header for the movies output
 .print "Movies"
@@ -175,6 +201,7 @@ VALUES ("The Dark Knight Rises", 2012, "PG-13", 1);
 
 -- The SQL statement for the movies output
 -- TODO!
+
 
 -- Prints a header for the cast output
 .print ""
