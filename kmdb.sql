@@ -164,7 +164,9 @@ INSERT INTO topcast (
     movie_ID,
     actor_ID,
     charactername)
-VALUES (1, 2, "Alfred"),
+VALUES 
+(1, 1, "Bruce Wayne"),
+(1, 2, "Alfred"),
 (1, 3, "Ra's Al Ghul"),
 (1, 4, "Rachel Dawes"),
 (1, 5, "Commissioner Gordon"),
@@ -214,3 +216,7 @@ WHERE movies.studio_id = studios.id;
 
 -- The SQL statement for the cast output
 -- TODO!
+SELECT movies.title, actors.actorname, topcast.charactername
+FROM topcast 
+INNER JOIN movies ON topcast.movie_ID = movies.id
+INNER JOIN actors ON topcast.actor_ID = actors.id;
