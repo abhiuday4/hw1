@@ -146,6 +146,28 @@ CREATE TABLE actors (
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+INSERT INTO movies (
+    title,
+    releaseyear,
+    rating,
+    studio_ID) 
+VALUES ("Batman Begins", 2005, "PG-13", 1)
+VALUES ("The Dark Knight", 2008, "PG-13", 1)
+VALUES ("The Dark Knight Rises", 2012, "PG-13", 1);
+
+INSERT INTO studios (
+    name) 
+VALUES ("Warner Bros");
+
+INSERT INTO topcast (
+    title,
+    releaseyear,
+    rating,
+    studio_ID) 
+VALUES ("Batman Begins", 2005, "PG-13", 1)
+VALUES ("The Dark Knight", 2008, "PG-13", 1)
+VALUES ("The Dark Knight Rises", 2012, "PG-13", 1);
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
